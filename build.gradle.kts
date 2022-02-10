@@ -57,6 +57,7 @@ dependencies {
     implementation("org.postgresql:postgresql")
     implementation("org.jooq:jooq")
     implementation("org.flywaydb:flyway-core:8.4.4")
+    implementation("ch.qos.logback:logback-classic:1.2.10")
 
     testImplementation("io.strikt:strikt-jvm:0.34.1")
     testImplementation(enforcedPlatform("org.junit:junit-bom:5.8.2"))
