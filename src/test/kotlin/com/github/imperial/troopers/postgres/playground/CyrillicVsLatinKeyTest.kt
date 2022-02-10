@@ -89,11 +89,11 @@ class CyrillicVsLatinKeyTest {
         .fetchArray()
 
     private fun DSLContext.generateData() {
-        generateRecords(50, 1, Random::latinString)
-        generateRecords(25, 2, Random::latinString)
-        generateRecords(80, 2, Random::cyrillicString)
-        generateRecords(40, 4, Random::cyrillicString)
-        generateRecords(10) { null }
+        generateRecords(number = 50, recordsPerGeozone = 1, valueSupplier = Random::latinString)
+        generateRecords(number = 25, recordsPerGeozone = 2, valueSupplier = Random::latinString)
+        generateRecords(number = 80, recordsPerGeozone = 2, valueSupplier = Random::cyrillicString)
+        generateRecords(number = 40, recordsPerGeozone = 4, valueSupplier = Random::cyrillicString)
+        generateRecords(number = 10, valueSupplier = { null })
     }
 
     private companion object {
